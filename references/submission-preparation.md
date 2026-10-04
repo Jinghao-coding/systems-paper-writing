@@ -30,6 +30,6 @@ Deliver the requested files and report concrete completed checks. Uploading or s
 
 Use the [venue guide](venue-guide.md) to identify the relevant community and year/track. Check whether review criteria concern a new mechanism, validated insight, operational experience, or another contribution type. Align the abstract and evidence with the actual contribution.
 
-For artifact preparation, map important claims and figures to the corresponding input, command, output, environment, and expected variation. Identify special hardware and access needs early. A reduced demonstration and a full performance reproduction serve different purposes; label each accurately. Use the [AE experience resources](writing-resources.md) for practical preparation and the current artifact call for requirements.
+For artifact preparation, map important claims and figures to the corresponding input, command, output, environment, and expected variation. Identify special hardware and access needs early. A reduced demonstration and a full performance reproduction serve different purposes; label each accurately. Use the [AE experience resources](writing-playbook.md) for practical preparation and the current artifact call for requirements.
 
 For a response or revision, separate the reviewer's question, the evidence answering it, and the resulting manuscript change. Explain factual disagreements with precise source locations. Report completed work as completed and proposed work as proposed.

@@ -20,4 +20,8 @@ Selected workflows from the MIT-licensed `Jinghao-coding/system-paper-skill` at 
 
 ## Expanded venue and resource guidance, 2026-10-05
 
-The [venue guide](venue-guide.md) records official conference/community entry points and a topic-based recommendation map. The [writing-resource guide](writing-resources.md) attributes 11 groups of resources, with dates, reading locations, and independently written applications. It includes classic systems writing, author blogs, technical language, benchmarking, reviewing, and artifact experience. Recommendation categories are editorial synthesis; year-specific requirements stay attached to their sources.
+The [venue guide](venue-guide.md) records official conference/community entry points and a topic-based recommendation map. The [source registry](writing-sources.md) attributes 11 groups of resources, with dates and source locations; the [local playbook](writing-playbook.md) contains the independently written methods and examples. It includes classic systems writing, author blogs, technical language, benchmarking, reviewing, and artifact experience. Recommendation categories are editorial synthesis; year-specific requirements stay attached to their sources.
+
+## Local synthesis, 2026-10-05
+
+The [writing playbook](writing-playbook.md) is the operational guide. Extracted principles have been reorganized by writing decisions and paired with original constructed examples. The [source registry](writing-sources.md) retains attribution separately; source websites are not required for ordinary use.

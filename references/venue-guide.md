@@ -42,4 +42,4 @@ These dated links document the material consulted. For an actual submission, ret
 
 Start from the contribution: what does a reader learn that changes how systems are understood or built? Identify the most relevant communities, then inspect recent accepted papers and the current CFP. Explain a shortlist through scope, contribution type, evidence, and the user's constraints. Avoid inferring that every GPU paper belongs at an architecture conference or every learning-based scheduler belongs at an ML conference.
 
-Select exemplar papers with comparable research objects and contribution types. Borrow explanatory techniques from neighboring communities without importing their assumptions or forcing the manuscript into their section structure. For concrete writing resources, read [systems-writing resources](writing-resources.md).
+Select exemplar papers with comparable research objects and contribution types. Borrow explanatory techniques from neighboring communities without importing their assumptions or forcing the manuscript into their section structure. For concrete writing resources, read [systems-writing resources](writing-playbook.md).

@@ -31,7 +31,7 @@
 
 [会议推荐指南](references/venue-guide.md)覆盖 11 个研究方向，并补充专业会议和 workshop。阅读选材与投稿候选分别判断；实际投稿按当届范围、文章类型及适用的 CCF 目录筛选。
 
-[写作资料指南](references/writing-resources.md)整理 11 组经典指南、研究者博客、官方作者建议和 artifact 经验，说明每组资料如何用于语言修改、论证组织、实验解释与审稿回应。ATC 已更新为 2026 年的 ACM SIGOPS 名称，历史 USENIX ATC 论文继续作为参考。
+[本地写作方法](references/writing-playbook.md)已将资料内容提炼为可直接执行的论证方法、语言诊断、实验解释、审稿回应和 artifact 准备步骤，并附有上下文明确的修改示例。日常写作和润色直接读取本地技能，无需再打开原始博客或指南；[来源记录](references/writing-sources.md)单独保存署名和链接。查询新文献、核验引用或确认当届投稿规定时，再按任务需要联网。
 
 ## 安装与调用
 

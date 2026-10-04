@@ -3,7 +3,7 @@ name: systems-paper-writing
 description: Draft, organize, review, and refine English computer-systems research papers targeting CCF A conferences and journals. Covers scheduling, GPU sharing, cluster management, AI infrastructure, and agent systems, including journal extensions. Use for mechanism explanations, technical arguments, evaluation narratives, and submission preparation; verify current venue requirements when needed.
 license: Apache-2.0
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   language: en
 ---
 
@@ -52,7 +52,7 @@ For a journal extension, identify added mechanisms, operating conditions, implem
 
 Use the [venue guide](references/venue-guide.md) when recommending submission candidates or selecting exemplars. Start with the research question and contribution type; expand beyond OSDI, SOSP, ASPLOS, EuroSys, and ATC into relevant networking, storage, architecture, parallel computing, performance, data systems, ML infrastructure, and specialist communities. Preserve the user's CCF A preference by verifying the applicable classification when forming a submission shortlist.
 
-For source-backed advice on introductions, language, evaluation, review responses, or artifacts, read the relevant item in [writing resources](references/writing-resources.md). Apply its concrete reasoning to the manuscript. Distinguish official year/track requirements from author preferences and historical practices; retain flexible structure and supported claims.
+Apply the [local writing playbook](references/writing-playbook.md) directly for introductions, language, design explanations, evaluation, review responses, and artifacts. It contains extracted methods, decision criteria, and constructed examples. Use the manuscript and local guides without reopening external writing articles. Source links in [the attribution registry](references/writing-sources.md) document provenance; they are not runtime reading steps. Look up external information only when the task needs new literature, citation verification, current submission rules, or an explicit source audit/update.
 
 ## Use the paper corpus
 

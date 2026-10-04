@@ -72,7 +72,7 @@ For a substantial issue, provide its location, effect, evidence, and a practical
 
 ## Apply a source-informed language pass
 
-Use the [writing resources](writing-resources.md) for the reasoning behind these checks. Diagnose the sentence in its actual paragraph before rewriting:
+Use the [writing resources](writing-playbook.md) for the reasoning behind these checks. Diagnose the sentence in its actual paragraph before rewriting:
 
 - Identify what is already established and what the sentence adds. Replace a vague reference such as “this improves efficiency” with its actual antecedent and the supported effect; obtain the missing fact instead of guessing it.
 - Separate a measured quantity from an interpretation. A throughput loss is not automatically the same percentage of CPU overhead. State the measured metric and report resource cost only when it was measured or validly derived.
