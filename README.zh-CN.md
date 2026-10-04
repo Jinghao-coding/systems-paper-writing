@@ -25,6 +25,14 @@
 
 技能指令和参考指南使用英文，交流语言遵循用户要求。CCF A 是目标场所与选材偏好；章节数量、句数、篇幅和图表按研究与当届要求确定。中文博士论文整合与学校规范适配可使用独立的 `cs-phd-writing`。
 
+## 推荐会议与写作资料
+
+以 **OSDI、SOSP、ASPLOS、EuroSys、ATC** 为常见起点，按研究问题扩展：网络系统参考 **NSDI / SIGCOMM**，存储参考 **FAST**，体系结构参考 **ISCA / MICRO / HPCA**，并行执行与系统软件参考 **PPoPP / PLDI / SC**，性能评价参考 **SIGMETRICS**，数据系统参考 **SIGMOD / VLDB / ICDE**，机器学习基础设施参考 **MLSys**。
+
+[会议推荐指南](references/venue-guide.md)覆盖 11 个研究方向，并补充专业会议和 workshop。阅读选材与投稿候选分别判断；实际投稿按当届范围、文章类型及适用的 CCF 目录筛选。
+
+[写作资料指南](references/writing-resources.md)整理 11 组经典指南、研究者博客、官方作者建议和 artifact 经验，说明每组资料如何用于语言修改、论证组织、实验解释与审稿回应。ATC 已更新为 2026 年的 ACM SIGOPS 名称，历史 USENIX ATC 论文继续作为参考。
+
 ## 安装与调用
 
 Codex 新安装示例：

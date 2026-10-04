@@ -69,3 +69,14 @@ Review categories:
 - **Technical question:** a missing fact that existing materials cannot resolve.
 
 For a substantial issue, provide its location, effect, evidence, and a practical correction or completion criterion. Keep editorial explanations outside the replacement text.
+
+## Apply a source-informed language pass
+
+Use the [writing resources](writing-resources.md) for the reasoning behind these checks. Diagnose the sentence in its actual paragraph before rewriting:
+
+- Identify what is already established and what the sentence adds. Replace a vague reference such as “this improves efficiency” with its actual antecedent and the supported effect; obtain the missing fact instead of guessing it.
+- Separate a measured quantity from an interpretation. A throughput loss is not automatically the same percentage of CPU overhead. State the measured metric and report resource cost only when it was measured or validly derived.
+- Preserve comparisons with a clear denominator. For an illustrative change from 100 ms to 80 ms, write “20% lower latency” or “1.25x speedup” according to the intended metric, not “25% lower latency.” These are arithmetic examples, not experimental results.
+- Keep the scope of quantifiers, modifiers, and guarantees clear. In “the controller always selects a feasible placement,” establish the feasible-set and failure conditions before retaining “always.” Language refinement must not silently strengthen or weaken the guarantee.
+
+Revise only the defects present in the passage. Keep established terms, correct clauses, and necessary conditions even when another source recommends a different stylistic preference.

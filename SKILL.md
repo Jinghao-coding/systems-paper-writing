@@ -3,7 +3,7 @@ name: systems-paper-writing
 description: Draft, organize, review, and refine English computer-systems research papers targeting CCF A conferences and journals. Covers scheduling, GPU sharing, cluster management, AI infrastructure, and agent systems, including journal extensions. Use for mechanism explanations, technical arguments, evaluation narratives, and submission preparation; verify current venue requirements when needed.
 license: Apache-2.0
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   language: en
 ---
 
@@ -47,6 +47,12 @@ Explain credible alternatives when they reveal an important trade-off. Distingui
 Separate offline preparation, online decisions, updates, and their costs. Choose evaluation order according to evidence dependencies. Explain how local effects influence system objectives and where benefits diminish or costs increase.
 
 For a journal extension, identify added mechanisms, operating conditions, implementation, evaluation, or explanation by comparing the relevant versions. Update motivation, design, implementation, experiments, and contributions consistently.
+
+## Choose relevant venues and writing resources
+
+Use the [venue guide](references/venue-guide.md) when recommending submission candidates or selecting exemplars. Start with the research question and contribution type; expand beyond OSDI, SOSP, ASPLOS, EuroSys, and ATC into relevant networking, storage, architecture, parallel computing, performance, data systems, ML infrastructure, and specialist communities. Preserve the user's CCF A preference by verifying the applicable classification when forming a submission shortlist.
+
+For source-backed advice on introductions, language, evaluation, review responses, or artifacts, read the relevant item in [writing resources](references/writing-resources.md). Apply its concrete reasoning to the manuscript. Distinguish official year/track requirements from author preferences and historical practices; retain flexible structure and supported claims.
 
 ## Use the paper corpus
 

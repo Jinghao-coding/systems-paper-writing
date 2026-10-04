@@ -17,3 +17,7 @@ Adopted ideas include application/environment scope, reader prerequisites, claim
 ## Reference-tool consolidation
 
 Selected workflows from the MIT-licensed `Jinghao-coding/system-paper-skill` at `39fdb764f0fca8108fe3ef67cbdd1e088505554d` were reworked into a small standard-library CLI. See [migration decisions](repository-migration.md), [reference workflow](reference-workflow.md), and [NOTICE](../NOTICE.md). No fixed venue-ranking data or generated citation examples are bundled.
+
+## Expanded venue and resource guidance, 2026-10-05
+
+The [venue guide](venue-guide.md) records official conference/community entry points and a topic-based recommendation map. The [writing-resource guide](writing-resources.md) attributes 11 groups of resources, with dates, reading locations, and independently written applications. It includes classic systems writing, author blogs, technical language, benchmarking, reviewing, and artifact experience. Recommendation categories are editorial synthesis; year-specific requirements stay attached to their sources.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0 — 2026-10-05
+
+- Add an expandable venue recommendation map across 11 systems research areas, with official entry points and contribution-based selection.
+- Integrate 11 groups of original writing resources, researcher blogs, author guidance, and artifact experience into actionable revision guidance.
+- Extend language checks, evaluation interpretation, contribution-type selection, review responses, and paper-to-artifact mapping.
+- Update ATC naming for the ACM SIGOPS 2026 series and distinguish dated policies from reusable advice.
+- Add bilingual README navigation for the new guides.
+
 ## 1.0.0 — 2026-10-05
 
 - Publish English instructions and reference guides for systems-paper drafting, refinement, review, and journal extensions.
