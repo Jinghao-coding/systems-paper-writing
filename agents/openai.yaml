@@ -1,0 +1,4 @@
+interface:
+  display_name: "Systems Paper Writing"
+  short_description: "Draft and refine systems papers for CCF A venues"
+  default_prompt: "Use $systems-paper-writing to draft, review, or refine my systems paper within the requested scope, preserving scientific meaning and improving mechanisms, arguments, and evaluation prose."
