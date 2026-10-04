@@ -1,6 +1,6 @@
 # Writing-source attribution
 
-Source snapshot: 2026-10-05. This registry records the origins of the locally synthesized guidance in [the writing playbook](writing-playbook.md). Links are attribution and maintenance references. Ordinary writing tasks use the local guides without opening these pages. Consult originals only for an explicit source audit, a material ambiguity that local material cannot resolve, or a requested update.
+Source snapshot: 2026-10-05. This registry records the origins of the synthesized guidance in [the writing playbook](writing-playbook.md). Links are attribution and maintenance references. Ordinary writing tasks use the skill guidance without opening these pages. Consult originals only for an explicit source audit, a material ambiguity that the skill content cannot resolve, or a requested update.
 
 ## 1. Levin and Redell: How (and How Not) to Write a Good Systems Paper
 

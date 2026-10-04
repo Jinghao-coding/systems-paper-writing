@@ -2,10 +2,10 @@
 
 ## 1.2.0 — 2026-10-05
 
-- Replace the source-oriented reading guide with a self-contained local writing playbook.
+- Replace the source-oriented reading guide with a self-contained writing playbook.
 - Embed contribution decisions, motivation and design methods, contextual language diagnostics, evaluation reasoning, review responses, and artifact mapping.
 - Add constructed revisions with explicit factual premises and a derived metric example.
-- Separate source attribution from execution instructions; ordinary writing uses local guidance without fetching the original articles.
+- Separate source attribution from execution instructions; ordinary writing uses skill guidance without fetching the original articles.
 
 ## 1.1.0 — 2026-10-05
 

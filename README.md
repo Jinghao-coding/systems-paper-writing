@@ -35,7 +35,7 @@ Instructions and reference guides are in English. Communicate in the user's requ
 
 Start with **OSDI, SOSP, ASPLOS, EuroSys, and ATC**, then expand according to the contribution: **NSDI / SIGCOMM** for networked systems, **FAST** for storage, **ISCA / MICRO / HPCA** for architecture, **PPoPP / PLDI / SC** for parallel execution and systems software, **SIGMETRICS** for performance, **SIGMOD / VLDB / ICDE** for data systems, and **MLSys** for ML infrastructure. Specialist communities and workshops are included in the [11-area venue guide](references/venue-guide.md).
 
-The guide separates reading recommendations from submission selection and records official entry points. The [local writing playbook](references/writing-playbook.md) provides extracted methods, decision criteria, and constructed revisions for direct use. Ordinary writing and polishing use the installed files without opening the source websites. [Source attribution](references/writing-sources.md) is maintained separately.
+The guide separates reading recommendations from submission selection and records official entry points. The [writing playbook](references/writing-playbook.md) provides extracted methods, decision criteria, and constructed revisions for direct use. Writing and polishing apply these methods directly. [Source attribution](references/writing-sources.md) is maintained separately.
 
 ## Quick start
 

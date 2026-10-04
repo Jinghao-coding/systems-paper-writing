@@ -1,4 +1,4 @@
-# Local systems-paper writing playbook
+# Systems-paper writing playbook
 
 Use this guide directly with the manuscript and supplied research materials. It contains the extracted methods and their context-sensitive application; no external reading is required to apply them. Source attribution is kept separately in [writing sources](writing-sources.md). The procedures and examples below are this skill's synthesis, not quotations or mandatory conference templates.
 
@@ -57,7 +57,7 @@ This resolves the control/execution boundary without inventing an immediate noti
 
 Use the paragraph's role to determine what each sentence must contribute. Resolve meaning before shortening. A clear sentence identifies an actor or topic, its main action, and necessary conditions. Keep the subject near the verb when intervening detail obscures the action.
 
-| Symptom | Local diagnosis and revision |
+| Symptom | Contextual diagnosis and revision |
 | --- | --- |
 | “This reduces its cost.” | Resolve both referents from nearby text. Name the relevant operation and measured cost if multiple candidates exist. |
 | A chain of abstract nouns | Recover the actual actor and verb; preserve distinct actions instead of replacing them with an invented umbrella term. |
@@ -103,4 +103,4 @@ Use a released artifact identifier when available and keep the link between code
 
 Return usable replacement text for an edit. Provide located findings for a review. Keep unresolved facts and proposed research outside manuscript prose. Check that the revision preserves terminology, evidence strength, conditions, references, and technical semantics.
 
-Apply this playbook from local files. External source pages are not prerequisites for writing or polishing. Network lookup is appropriate for requested new literature, citation verification, actual current venue rules, or an explicit source update. If the user requests an offline task, keep it offline and identify any dynamic fact that remains to be verified.
+Apply this playbook directly. External source pages are not prerequisites for writing or polishing. Network lookup is appropriate for requested new literature, citation verification, actual current venue rules, or an explicit source update. If the user requests an offline task, keep it offline and identify any dynamic fact that remains to be verified.
