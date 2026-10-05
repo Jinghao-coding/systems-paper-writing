@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.0 — 2026-10-05
+
+- Add first-class author review, other-paper review, and venue-fit/readiness workflows with conditional guide loading.
+- Add a distributable multi-file manuscript, complete reviews, an applicable revision patch, and simulated venue policies.
+- Add research-type inspection paths, three deeper version-fingerprinted corpus cases, and blind behavioral task preparation/recording.
+- Preserve title operators, isolate malformed metadata records, and separate BibTeX retrieval, basic syntax, DOI identity, and claim support.
+- Extend the existing package checker and CI tests for anchors, titled links, current versions, scoped fixtures, and approved example patches.
+- Validate 37 regressions and 13 fresh-context task executions; retain complete outputs, per-dimension assessments, and actual patch replay evidence in [the validation record](validation/2026-10-05.md).
+
 ## 1.2.0 — 2026-10-05
 
 - Replace the source-oriented reading guide with a self-contained writing playbook.

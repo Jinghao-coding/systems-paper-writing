@@ -37,10 +37,10 @@ class ReferenceTools(unittest.TestCase):
             self.assertEqual(m.verify({'title':self.paper['title']})['status'],'needs_identifier')
     def test_no_bibtex_generation_after_error(self):
         with patch.object(m,'fetch',side_effect=OSError('timeout')):
-            with self.assertRaises(OSError):m.bibtex(self.paper['doi'])
+            self.assertEqual(m.bibtex(self.paper['doi'])['status'],'unresolved')
     def test_html_is_not_bibtex(self):
         with patch.object(m,'fetch',return_value='<html>Login</html>'):
-            with self.assertRaises(ValueError):m.bibtex(self.paper['doi'])
+            self.assertEqual(m.bibtex(self.paper['doi'])['status'],'unresolved')
     def test_retrieved_entry_preserved(self):
         raw='@article{x, title={GPU}, author={Lin, Alice and Wu, Bo}}'
         with patch.object(m,'fetch',return_value=raw):
@@ -75,5 +75,81 @@ class ReferenceTools(unittest.TestCase):
             p=Path(d)/'input.json';p.write_text('{"papers":null}')
             out=subprocess.run([sys.executable,str(PATH),'verify','--input',str(p)],capture_output=True)
             self.assertEqual(out.returncode,2)
+
+    def test_title_operators_preserved(self):
+        for left, right in [('C++', 'C#'), ('x < 0', 'x > 0'), ('A-B', 'AB')]:
+            self.assertEqual(m.compare({'title': left}, {'title': right})['checks']['title'], 'review')
+        self.assertEqual(m.compare({'title': '  GPU  Scheduling'}, {'title': 'gpu scheduling'})['checks']['title'], 'match')
+
+    def test_malformed_author_inputs_before_network(self):
+        for authors in ['Alice', None, [7], [{'given': 5}], [{}]]:
+            with patch.object(m, 'fetch', side_effect=AssertionError('network')):
+                result = m.verify(dict(self.paper, authors=authors))
+            self.assertEqual(result['status'], 'unresolved')
+            self.assertEqual(result['error_type'], 'StructureError')
+
+    def test_malformed_provider_records(self):
+        for item in [None, {}, {'title': []}, {'author': []}, {'author': 'Alice'}, {'author': [1]}, {'title': [7]}, {'title': ['A'], 'issued': None}]:
+            with self.assertRaises(m.StructureError):
+                m.record(item)
+
+    def test_invalid_envelopes(self):
+        for data in [None, [], {}, {'message': None}, {'message': []}]:
+            with patch.object(m, 'fetch', return_value=json.dumps(data)):
+                self.assertEqual(m.verify(self.paper)['status'], 'unresolved')
+
+    def test_search_keeps_valid_neighbor_and_raw_error(self):
+        raw = {'message': {'items': [None, {'title': ['Good'], 'author': [{'name': 'Group'}]}]}}
+        with patch.object(m, 'fetch', return_value=json.dumps(raw)):
+            result = m.search('Good')
+        self.assertEqual(result['papers'][0]['title'], 'Good')
+        self.assertEqual(result['errors'][0]['index'], 0)
+        self.assertIsNone(result['errors'][0]['raw_record'])
+
+    def test_batch_null_keeps_neighbor(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / 'input.json'; p.write_text('[null, {}]')
+            before = p.read_bytes()
+            out = subprocess.run([sys.executable, str(PATH), 'verify', '--input', str(p)], capture_output=True, text=True)
+            self.assertEqual(out.returncode, 0)
+            result = json.loads(out.stdout)
+            self.assertEqual(result[0]['verification']['status'], 'unresolved')
+            self.assertEqual(result[1]['verification']['status'], 'needs_identifier')
+            self.assertEqual(p.read_bytes(), before)
+
+    def test_programming_errors_surface(self):
+        with patch.object(m, 'lookup', side_effect=RuntimeError('bug')):
+            with self.assertRaises(RuntimeError):
+                m.verify(self.paper)
+
+    def test_raw_whitespace_and_doi_conflict(self):
+        raw = '  @article{x, title={A}, doi={10.1234/other}}\n'
+        with patch.object(m, 'fetch', return_value=raw):
+            result = m.bibtex(self.paper['doi'])
+        self.assertEqual(result['bibtex'], raw)
+        self.assertEqual(result['validation']['syntax'], 'basic_pass')
+        self.assertEqual(result['validation']['identifier'], 'conflict')
+        self.assertEqual(result['validation']['claim_support'], 'requires_reading')
+
+    def test_truncation_retains_attempts(self):
+        raw = '@article{x, title={Truncated}'
+        with patch.object(m, 'fetch', return_value=raw):
+            result = m.bibtex(self.paper['doi'])
+        self.assertEqual(result['status'], 'unresolved')
+        self.assertEqual(result['attempts'][0]['raw'], raw)
+
+    def test_bibtex_syntax_and_missing_identifier(self):
+        for raw in ['@article{x, title={A {nested} name}}', '@article(x, title="A name")']:
+            result = m.bibtex_checks(raw, self.paper['doi'])
+            self.assertEqual(result['syntax'], 'basic_pass')
+            self.assertEqual(result['identifier'], 'missing')
+        for raw in ['@article{x}', '@article{x,}', '@article{x, title={A}} junk', '@article{x, title=}', '@article{x, title={A} broken}']:
+            self.assertEqual(m.bibtex_checks(raw, self.paper['doi'])['syntax'], 'invalid_or_unsupported')
+
+    def test_bibtex_doi_is_top_level_only(self):
+        raw = '@article{x, title={A, doi={10.1234/wrong}}, doi={10.1234/example}}'
+        result = m.bibtex_checks(raw, self.paper['doi'])
+        self.assertEqual(result['identifier'], 'match')
+        self.assertEqual(result['fields_present'], ['doi', 'title'])
 
 if __name__=='__main__':unittest.main()

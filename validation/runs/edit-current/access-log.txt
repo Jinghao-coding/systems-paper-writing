@@ -1,0 +1,30 @@
+# Access log
+
+Actual model identifier: unknown (no exact runtime model identifier exposed).
+
+Files actually read (relative to this task directory):
+
+- `TASK.md`
+- `skill/SKILL.md`
+- `skill/references/writing-playbook.md`
+- `skill/references/style-analysis.md`
+- `materials/paper/PROJECT.md`
+- `materials/paper/main.tex`
+- `materials/paper/sections/abstract.tex`
+- `materials/paper/sections/introduction.tex`
+- `materials/paper/sections/design.tex`
+- `materials/paper/sections/evaluation.tex`
+- `materials/paper/sections/related.tex`
+- `output.md`
+
+Tools actually used:
+
+- `functions.exec` orchestrating `tools.exec_command`.
+- Shell commands: `rg --files -g "*"` to enumerate this task directory; `cat` to read the files listed above; `python3` with pathlib, difflib, and re to re-read edit targets, apply scoped edits, check invariants, and save deliverables.
+
+Written files:
+
+- Four active source files: abstract.tex, introduction.tex, design.tex (caption only), evaluation.tex (caption only).
+- `output.md`, `revision.patch`, `access-log.md`.
+
+All filesystem access was restricted to this task directory. No network access, external repositories, historical manuscript reads, build invocation, or expected-answer access occurred. The directory listing exposed filenames only for other task-local files.

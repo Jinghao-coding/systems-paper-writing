@@ -61,3 +61,11 @@ Use the manuscript's bibliography backend and venue style. Preserve complete aut
 The source workflow's fixed venue-ranking database and generic citation-style formatter were not carried over: the writing skill uses task-specific source selection and the project's actual bibliography style.
 
 BibTeX retrieval tries the DOI resolver and then the official Crossref transform endpoint once if retrieval fails. It preserves the returned entry and records the successful endpoint. See [Crossref content negotiation](https://www.crossref.org/documentation/retrieve-metadata/content-negotiation/).
+
+## Defensive metadata handling
+
+Title comparison preserves punctuation/operators and uses Unicode NFC, case folding, and whitespace normalization. `C++` versus `C#` and `x < 0` versus `x > 0` require review. DOI comparison uses DOI-specific normalization, years compare their textual integer form, and authors compare ordered validated names. Venue/name punctuation differences remain reviewable; original inputs and provider records are retained.
+
+Malformed input entries return individual `unresolved` records with `error_type`; valid neighbors survive a batch. Search keeps valid candidates and reports indexed `errors` with raw provider records. Empty/null responses and malformed author/date structures are not successful metadata verification. Unexpected programming errors are allowed to surface rather than being swallowed by a catch-all.
+
+BibTeX returns exact response text, source, and retrieval attempts. `status: retrieved` means acquisition only; inspect `validation.syntax` (`basic_pass` or `invalid_or_unsupported`), `validation.identifier` (`match`, `conflict`, `missing`, `unresolved`, or `not_checked`), and `claim_support` separately. The conservative single-entry envelope/field check is not a complete BibTeX parser. Truncated responses remain unresolved with the raw attempt retained; explicit DOI conflicts are reported even when an entry is retrieved. Missing identifiers/fields stay missing. Review complex BibTeX with the project's parser before import; no metadata is guessed.

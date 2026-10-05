@@ -1,4 +1,4 @@
 interface:
   display_name: "Systems Paper Writing"
-  short_description: "Draft and refine systems papers for CCF A venues"
-  default_prompt: "Use $systems-paper-writing to draft, review, or refine my systems paper within the requested scope, preserving scientific meaning and improving mechanisms, arguments, and evaluation prose."
+  short_description: "Review drafts, assess papers, and match systems venues"
+  default_prompt: "Use $systems-paper-writing to review my draft, assess another paper, or match submission venues as requested. Preserve scientific meaning, distinguish evidence gaps from errors, and keep local edits scoped."

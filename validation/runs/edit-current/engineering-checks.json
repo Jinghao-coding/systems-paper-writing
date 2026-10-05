@@ -1,0 +1,12 @@
+{
+  "changed_files": [
+    "sections/evaluation.tex",
+    "sections/abstract.tex",
+    "sections/design.tex",
+    "sections/introduction.tex"
+  ],
+  "captions_only_in_design_and_evaluation": true,
+  "labels_preserved": true,
+  "nonpreemptive_paragraph_preserved": true,
+  "actual_patch_replays_exact_edited_tree": true
+}

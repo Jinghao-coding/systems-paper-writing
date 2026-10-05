@@ -1,0 +1,12 @@
+{
+  "simulation": true,
+  "snapshot_date": "2026-10-05",
+  "description": "Fictional fixtures; no real CFP, classification, or current conference fact.",
+  "venues": [
+    {"series":"Systems Forum", "year":2027, "track":"Research", "status":"verified_fixture", "source":"fixture://systems-2027", "scope":"Operating-system mechanisms and resource management", "review":"Clear semantics and evidence supporting system claims", "pages":"12 body pages; references excluded", "anonymity":"Double anonymous", "author_ai":"Disclose generated text", "reviewer_ai":"Prohibited for entrusted submissions", "supplement":"Optional appendix, not required reading", "deadline":"2026-11-01T23:59:00-12:00"},
+    {"series":"Architecture Forum", "year":2027, "track":"Research", "status":"verified_fixture", "source":"fixture://architecture-2027", "scope":"Hardware/software co-design with a demonstrated architectural contribution", "review":"Evidence for hardware-software interaction", "pages":"11 body pages; references excluded", "anonymity":"Double anonymous", "author_ai":"Disclose generated text", "supplement":"Separate supplement", "deadline":"2026-12-01T17:00:00+00:00"},
+    {"series":"Performance Forum", "year":2026, "track":"Measurement", "status":"historical_closed", "source":"fixture://performance-2026", "scope":"Representative measurement and validated models", "review":"Sampling, estimator and validation", "deadline":"2026-02-01T23:59:00+00:00"},
+    {"series":"Performance Forum", "year":2027, "track":null, "status":"unpublished_fixture", "source":"fixture://performance-2027", "notice":"The 2027 call has not been published in this fictional world."},
+    {"series":"Serving Forum", "year":2027, "track":null, "status":"inaccessible", "source":"fixture://serving-2027", "error":"Simulated official-tool timeout; no current policy content obtained."}
+  ]
+}

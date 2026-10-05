@@ -1,0 +1,9 @@
+建议将期刊版贡献句改为：
+
+> Compared with the conference version, we expand the explanation of the existing epoch-based cache invalidation mechanism with a concrete example and clarify its role in preventing reuse across a restart.
+
+实际扩展属于**说明性扩展（explanation）**。会议版 v1 第 3 节已规定：缓存条目的 epoch 与 worker 的 epoch 不一致时，必须在复用前将该条目失效。期刊版 v2 第 3 节完整保留了这一触发条件、操作及执行时机，新增 epoch 4 与 epoch 5 的例子，并解释该规则防止跨重启复用的作用。新增文字使已有机制更易理解，没有改变所述机制的执行语义。
+
+期刊版贡献句中的 “introduce a new ... mechanism absent from the conference version” 与会议版第 3 节直接矛盾，应删除该新颖性主张。材料明确说明没有配套代码变更或新增实验，因此这些段落支持更详细的机制解释，不能据此列为新的实现贡献或评估贡献；也没有呈现新的假设或适用场景。可将上述修订句用于版本差异说明，并将其从“新增机制”的贡献计数中移出。
+
+本判断依据所给两版第 3 节、期刊版贡献句及材料对代码和实验的说明；源材料未作修改。

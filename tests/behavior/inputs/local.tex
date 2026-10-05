@@ -1,0 +1,4 @@
+The worker executes each admitted request to completion before selecting the
+next request. This non-preemptive policy avoids discarding partial execution.
+
+The controller performs the computation of placements before workers poll it.

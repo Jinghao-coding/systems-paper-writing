@@ -1,0 +1,19 @@
+package
+Checked 159 local Markdown links and anchors.
+Package checks passed.
+Exit: 0
+
+unit and engineering tests
+.....................................
+----------------------------------------------------------------------
+Ran 37 tests in 0.597s
+
+OK
+Exit: 0
+
+skill frontmatter validation
+Skill is valid!
+Exit: 0
+
+diff whitespace
+Exit: 0

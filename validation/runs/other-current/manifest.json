@@ -1,0 +1,72 @@
+{
+  "task": "other",
+  "variant": "current",
+  "status": "assessed",
+  "material_sha256": {
+    "openqueue.md": "ce943cece5bf1ecb6babc95bf439044dad05b72be1129ea9d5969d1862a7ca87",
+    "paper/PROJECT.md": "e6feaf1e3ffaa6464a3edefde32ca7b6c614cfd386f150909053f9474e9622a4",
+    "paper/history/v0-abstract.tex": "3696841b06fe50e618213ae70cad7267ab3b7e5d5cfe78f53e63be7ef2a41cca",
+    "paper/main.tex": "400c8189664e6a62174d70a0b3e2ed8d93e039086332dc8b35ccf473d626fd08",
+    "paper/sections/abstract.tex": "7dbe71726b044dc878676d0577faaed80420cdd00d792d866508abcb80a41567",
+    "paper/sections/design.tex": "7e710725a9643b13feb52145c57f31f96e33d71b745e8def8e213651e5878c90",
+    "paper/sections/evaluation.tex": "bf216e84b72b6e6ddff03c425b26aef2fbdb4a7e1703fd565db47aa9216c00a8",
+    "paper/sections/introduction.tex": "fed13460d99bad8d04a09c250d1bd0ae46b6d96218cff41a5d2bdfaca0d2c81f",
+    "paper/sections/related.tex": "c40c39e8c656b00d450951e32bd24cd2e37806fbe64d4aafc8b57e853b2ea37a"
+  },
+  "skill": {
+    "base_commit": "786fec6b50002e861b34966e6b0bb3b20b8d0d19",
+    "tracked_diff_sha256": "1576e5d68c65d78363956bf70b26dab732d2d7316a5649febbc4e0960af2fdfc",
+    "resource_sha256": {
+      "SKILL.md": "c34e79ce8ad4ffe49a408af308b0d8840de7898c4e3e0c6e02786dcd79edc4cc",
+      "agents/openai.yaml": "1c67f4b3d82c006dd7d41e24ea3f421c3004438226fefb9032f345b1b31b3629",
+      "references/case-study-depth.md": "de4401b086f13ee960ed7beb4fcefc5f7c6b0f10e6b546b519bc9b96c478be16",
+      "references/edit-catalog.md": "fa33932a9acd6f35f363f8de3ef388b7bfab0f61a98550416e65dbe042c8c595",
+      "references/figure-and-table-style.md": "1cfba00ae5fe5ce7f16bb231d8b0c7345aeeb0194781772e56ae6e1b3a9e5446",
+      "references/journal-corpus.md": "f1295a49a06d7c2b58d5b0f5563a5480891c7333ac75aad9eec102d8ab3feffb",
+      "references/paper-analyses-agents.md": "7a1e9bcfeac201306dc9f6ff984e09aafb2b328810e2598fa87af5c7efe55479",
+      "references/paper-analyses-conferences.md": "982892f286134a3c2686c235258c3f4b82d2eecca2d4f7877e47d4e149187c8c",
+      "references/paper-analyses-journals.md": "ff506761965bdc46a68ee70dd63f594e77ecd76eba507aaff2c55da47a18b7e4",
+      "references/paper-corpus.md": "9dd6b5a8ea58ae3e8b1d2d71715aafb6bcd7782af89b7950c98b2aa96f23729b",
+      "references/provenance.md": "74375bb386b4caa9ee773453081e41a08d2dfeaa5bef627d8efa6c797550685e",
+      "references/reading-versions.json": "582549b7bde06a59060b7af453865ba6d511e42666216f61f3a0be8c679b7ae1",
+      "references/reference-workflow.md": "9ea2a81e17dbd34c731674c6bc317eed0047522b6240d35c62764d8fca080346",
+      "references/repository-migration.md": "f002d442f02dd84398a82f049f1275b4e17143ab19812d5a6ffd3a0d928ce5a3",
+      "references/style-analysis.md": "b32880d864510dac7023acfb44d0a068c4234992871a287f1fafd89e0d210bcb",
+      "references/submission-preparation.md": "9436d335b1220cab725da5c4b0dfc401a43e9c9a09bc74f515872ed41dcd754b",
+      "references/systems-paper-patterns.md": "cf0270a66cb4b0520ececebf4a8ded307630f60bb86231cfec51491dd66a7d0b",
+      "references/venue-guide.md": "f70c7d383b355940a661829dee0bcfd48a8f5e83bfc9d43d9d631cca407436a8",
+      "references/writing-playbook.md": "b22b27a542cb94e01e0bf288db10bc3f69b0f97c07eed43496c5a88539c48d98",
+      "references/writing-sources.md": "8dba5924b85333168aa8737cf3de3f8b644b8f6bf862e9962cffd1e4d36ce94c",
+      "review-workflows.md": "21f8911014d6c94beaa8e5e3ca1c692612287ee9d091a691912df6502f9f423d",
+      "scripts/behavior_eval.py": "2af341dd3674bbcc31a31da830e2547bd6bfb91ca3f8d56a8e52ad542d922be9",
+      "scripts/check_package.py": "f68778ae83068d80db6cb13110eb52de4ed1d6a8581cf6eee3f556aec50303e0",
+      "scripts/reference_tools.py": "07d99e3648e13ffe1af7049f506f382eb65efaac6c31e97acb2bd56af0205ab3"
+    }
+  },
+  "task_sha256": "dddad032f1049db8badd65074839d7ba76626595f03eab9b48c04e769162c20a",
+  "model": "unknown; inherited parent configuration, no override",
+  "host": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "available_tools": [
+    "shell/file operations",
+    "web",
+    "app connectors",
+    "UI automation",
+    "collaboration"
+  ],
+  "output_sha256": "eb4aa703ab4cb8b36aa7369e691c6e969641b72f4d8c82a585f5950fdf44c6bf",
+  "after_material_sha256": {
+    "openqueue.md": "ce943cece5bf1ecb6babc95bf439044dad05b72be1129ea9d5969d1862a7ca87",
+    "paper/PROJECT.md": "e6feaf1e3ffaa6464a3edefde32ca7b6c614cfd386f150909053f9474e9622a4",
+    "paper/history/v0-abstract.tex": "3696841b06fe50e618213ae70cad7267ab3b7e5d5cfe78f53e63be7ef2a41cca",
+    "paper/main.tex": "400c8189664e6a62174d70a0b3e2ed8d93e039086332dc8b35ccf473d626fd08",
+    "paper/sections/abstract.tex": "7dbe71726b044dc878676d0577faaed80420cdd00d792d866508abcb80a41567",
+    "paper/sections/design.tex": "7e710725a9643b13feb52145c57f31f96e33d71b745e8def8e213651e5878c90",
+    "paper/sections/evaluation.tex": "bf216e84b72b6e6ddff03c425b26aef2fbdb4a7e1703fd565db47aa9216c00a8",
+    "paper/sections/introduction.tex": "fed13460d99bad8d04a09c250d1bd0ae46b6d96218cff41a5d2bdfaca0d2c81f",
+    "paper/sections/related.tex": "c40c39e8c656b00d450951e32bd24cd2e37806fbe64d4aafc8b57e853b2ea37a"
+  },
+  "used_tools_evidence": "access-log.md (agent-reported)",
+  "execution_order_group": 1,
+  "sampler_parameters": "host defaults; not exposed",
+  "assessment_sha256": "543a2edd6b358016f7dc26304a25d75187ee3efbcc061110073f778ee8836af8"
+}

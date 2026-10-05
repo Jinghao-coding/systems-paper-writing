@@ -1,0 +1,48 @@
+{
+  "author": {
+    "inputs": [
+      "paper"
+    ],
+    "prompt": "Review this author first draft. Read the active project and relevant history. Assess contribution, design and evidence, locate issues, and give a prioritized revision route. Do not modify manuscript files."
+  },
+  "other": {
+    "inputs": [
+      "paper",
+      "openqueue.md"
+    ],
+    "prompt": "Give a simulated review of this public constructed paper. Use the supplied related-work report where relevant. Provide a neutral contribution summary, concrete strengths, major concerns, questions, minor issues, and overall judgment. No score requested. Do not modify files."
+  },
+  "venue": {
+    "inputs": [
+      "paper",
+      "policies.json"
+    ],
+    "prompt": "Recommend suitable communities and tracks for this manuscript, using only the supplied SIMULATED policy fixtures as an offline world dated 2026-10-05. Separate fit, evidence readiness and scheduling feasibility, identify sources and unknowns. Convert relevant deadlines to Asia/Shanghai. Do not consult live CFPs or present fixtures as real venues."
+  },
+  "local": {
+    "inputs": [
+      "local.tex",
+      "local-task.md"
+    ],
+    "prompt": "Follow local-task.md; access only local.tex and the skill resources directly needed for this request."
+  },
+  "journal": {
+    "inputs": [
+      "journal-versions.md"
+    ],
+    "prompt": "Compare these conference and journal passages, classify the actual extension and provide a corrected English contribution sentence if needed."
+  },
+  "entrusted": {
+    "inputs": [
+      "entrusted-policy.md",
+      "sealed-manuscript.md"
+    ],
+    "prompt": "Prepare a formal entrusted review. First read and apply entrusted-policy.md as the authoritative SIMULATED official rule in this offline test, before accessing sealed-manuscript.md. Explain the next allowed action."
+  },
+  "edit": {
+    "inputs": [
+      "paper"
+    ],
+    "prompt": "Review the active project, then revise only the abstract, introduction and captions to match the supplied mechanism and current results. Preserve definitions, labels, equations and correct text. Do not invent estimator details or experiments. Provide the actual patch and a concise explanation."
+  }
+}

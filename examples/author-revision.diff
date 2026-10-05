@@ -1,0 +1,48 @@
+--- a/sections/abstract.tex
++++ b/sections/abstract.tex
+@@ -1,5 +1,9 @@
+ \begin{abstract}
+-Shared inference services face queue growth during bursts. GateQueue accepts
+-all requests and orders them by predicted service time. It reduces end-to-end
+-P99 latency by 40\% relative to FIFO without changing completed work.
++Shared inference services face queue growth during bursts. GateQueue rejects
++requests when its waiting queue reaches a fixed capacity and orders admitted
++requests by predicted service time. In a synthetic burst trace, GateQueue
++completes 80 of 100 requests with a completed-request P99 latency of 80 ms;
++FIFO completes all 100 with a P99 of 100 ms. These observations illustrate a
++trade-off between service coverage and tail latency under the respective
++admission policies.
+ \end{abstract}
+--- a/sections/introduction.tex
++++ b/sections/introduction.tex
+@@ -2,8 +2,8 @@
+ A shared inference worker processes one request at a time. A burst can leave
+ short requests waiting behind long requests. GateQueue combines a queue budget
+ with shortest-estimated-service ordering. The contribution is an explicit
+-admission decision before ordering work on the worker. We claim lower tail
+-latency at equal service coverage.
++admission decision before ordering work on the worker. We examine completed-request tail
++latency together with service coverage under the respective admission policies.
+ 
+ The worker executes each admitted request to completion before selecting the
+ next request. This non-preemptive policy avoids discarding partial execution.
+--- a/sections/design.tex
++++ b/sections/design.tex
+@@ -23,5 +23,5 @@
+ \begin{figure}[h]
+ \centering
+ \fbox{Arrival $\longrightarrow$ budget check $\longrightarrow$ queue $\longrightarrow$ worker}
+-\caption{GateQueue executes every arriving request.}\label{fig:path}
++\caption{GateQueue checks its waiting-queue budget before admitting a request.}\label{fig:path}
+ \end{figure}
+--- a/sections/evaluation.tex
++++ b/sections/evaluation.tex
+@@ -15,7 +15,7 @@
+ FIFO & 100/100 & 100 & 10\\
+ GateQueue & 80/80 & 80 & 8\\
+ \end{tabular}
+-\caption{Synthetic burst trace; both configurations admit all offered work.}
++\caption{Synthetic burst trace; GateQueue admits 80 requests; FIFO admits all 100.}
+ \label{tab:burst}
+ \end{table}
+ 

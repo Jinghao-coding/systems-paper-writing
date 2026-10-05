@@ -1,0 +1,29 @@
+# Access log
+
+Actual model identifier: unknown (not exposed as a verifiable runtime model identifier).
+
+Only /tmp/spw-130-venue-none was inspected. No source repositories, expected answers, other runs, live CFPs, external sites, or external skill files were accessed. All supplied review materials were preserved without edits. No build or visual/layout inspection was performed.
+
+Files read:
+- TASK.md
+- manifest.json
+- materials/policies.json
+- materials/paper/PROJECT.md
+- materials/paper/main.tex
+- materials/paper/sections/abstract.tex
+- materials/paper/sections/introduction.tex
+- materials/paper/sections/design.tex
+- materials/paper/sections/evaluation.tex
+- materials/paper/sections/related.tex
+- materials/paper/history/v0-abstract.tex
+
+Tools used:
+- functions.exec to orchestrate tools.exec_command.
+- tools.exec_command with cat to read the task and supplied materials.
+- tools.exec_command with rg --files to enumerate this task directory.
+- tools.exec_command with python3 standard-library datetime and zoneinfo to convert the three supplied deadlines to Asia/Shanghai. This script did not open manuscript or external data files.
+- tools.exec_command with shell heredocs and cat to write output.md and access-log.md.
+
+Deliverables written:
+- /tmp/spw-130-venue-none/output.md
+- /tmp/spw-130-venue-none/access-log.md

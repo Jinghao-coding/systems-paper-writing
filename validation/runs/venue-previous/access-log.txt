@@ -1,0 +1,31 @@
+# Access log
+
+- Task boundary: `/tmp/spw-130-venue-previous` only. No live CFPs, external research, source repositories, expected answers, other task runs, or historical inactive abstract accessed.
+- Actual model identifier: unknown. No exact runtime model identifier was exposed to this agent; generic role descriptions were not treated as a runtime identifier.
+
+## Files actually read
+
+1. `TASK.md`
+2. `skill/SKILL.md`
+3. `materials/policies.json` (read as text and by Python for date conversion)
+4. `materials/paper/PROJECT.md`
+5. `materials/paper/main.tex`
+6. `materials/paper/sections/abstract.tex`
+7. `materials/paper/sections/introduction.tex`
+8. `materials/paper/sections/design.tex`
+9. `materials/paper/sections/evaluation.tex`
+10. `materials/paper/sections/related.tex`
+11. `skill/references/venue-guide.md`
+12. `skill/references/submission-preparation.md`
+13. `skill/references/style-analysis.md`
+
+Directory metadata/file names were listed with `ls -la` for the task directory and `rg --files` for `materials/` and `skill/references/`. Listing did not read the other files' contents. `manifest.json` was not read.
+
+## Tools used
+
+- `functions.exec`: orchestration and output display.
+- `tools.exec_command`: shell commands `cat`, `ls -la`, `rg --files`, and `python3`.
+- Python standard library `datetime`, `zoneinfo`, `json`, `pathlib`: read supplied policy fixture and convert explicit-offset deadlines to Asia/Shanghai. Python/runtime timezone resources are execution dependencies, not additional task evidence.
+- Shell heredocs with `cat` wrote `output.md` and this `access-log.md`.
+
+No browser, web, compilation, external source, or additional agent tools used. All input materials remained unchanged. Deliverables: `output.md`, `access-log.md`.

@@ -1,0 +1,25 @@
+\section{Evaluation}\label{sec:eval}
+The following numbers are synthetic teaching data, not results from an
+implemented system. Each row represents one 10-second trace with 100 arrivals,
+one worker, the same fixed model, and a warm model cache. All admitted work
+finishes before the trace ends. Latency is measured from arrival to completion
+as in Equation~\ref{eq:latency}, over completed requests only. Rejected requests
+are excluded from latency quantiles. The completion rate divides completed
+requests by the 10-second trace duration. Both policies use the same estimates;
+FIFO does not use them to order requests.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrr}
+Policy & Admitted/completed & P99 (ms) & Completed/s\\
+FIFO & 100/100 & 100 & 10\\
+GateQueue & 80/80 & 80 & 8\\
+\end{tabular}
+\caption{Synthetic burst trace; both configurations admit all offered work.}
+\label{tab:burst}
+\end{table}
+
+At low load, both policies complete 100 of 100 requests and have P99 of 20 ms.
+No latency gain appears in this low-load example. Per-request logs and repeated
+traces are not included. Table~\ref{tab:burst} supports a 20\% reduction in
+completed-request P99 under the respective admission policies.

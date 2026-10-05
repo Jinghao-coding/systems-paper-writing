@@ -1,0 +1,30 @@
+# Access log
+
+Actual model identifier: unknown (not exposed to this agent).
+
+## Files read
+
+- TASK.md
+- skill/SKILL.md
+- skill/references/style-analysis.md
+- skill/references/systems-paper-patterns.md
+- skill/references/writing-playbook.md
+- materials/paper/PROJECT.md
+- materials/paper/main.tex
+- materials/paper/sections/abstract.tex
+- materials/paper/sections/introduction.tex
+- materials/paper/sections/design.tex
+- materials/paper/sections/evaluation.tex
+- materials/paper/sections/related.tex
+- materials/openqueue.md
+
+All paths are relative to /tmp/spw-130-other-previous. Directory listings exposed names of manifest.json and materials/paper/history/v0-abstract.tex; their contents were not read. No other runs, source repositories, expected answers, or outside material were accessed.
+
+## Tools used
+
+- functions.exec, invoking tools.exec_command.
+- Shell commands: cat (read source and write requested deliverables), ls (task directory inventory), find (material file inventory).
+
+## Outputs and preservation
+
+Created output.md and access-log.md only. Original manuscript and skill materials remain unchanged. No build, network lookup, rendered-page inspection, or experimental execution was performed.

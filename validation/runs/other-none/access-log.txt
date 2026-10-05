@@ -1,0 +1,20 @@
+# Access log
+
+Actual model identifier: unknown (no concrete runtime model identifier was exposed).
+
+Files actually read:
+- `/tmp/spw-130-other-none/TASK.md`
+- `/tmp/spw-130-other-none/materials/openqueue.md`
+- `/tmp/spw-130-other-none/materials/paper/PROJECT.md`
+- `/tmp/spw-130-other-none/materials/paper/main.tex`
+- `/tmp/spw-130-other-none/materials/paper/sections/abstract.tex`
+- `/tmp/spw-130-other-none/materials/paper/sections/introduction.tex`
+- `/tmp/spw-130-other-none/materials/paper/sections/design.tex`
+- `/tmp/spw-130-other-none/materials/paper/sections/evaluation.tex`
+- `/tmp/spw-130-other-none/materials/paper/sections/related.tex`
+
+Tools used: `functions.exec` orchestrating `tools.exec_command`; shell `cat` for reading, `rg --files` for the task-directory inventory, and `python3` with `pathlib` to write the two requested deliverables. No browsing, compilation, source-repository access, expected-answer access, or other-run access. The inactive historical abstract and manifest were listed but not opened. Review-only input materials were preserved. No visual/layout review was performed.
+
+Outputs written:
+- `/tmp/spw-130-other-none/output.md`
+- `/tmp/spw-130-other-none/access-log.md`

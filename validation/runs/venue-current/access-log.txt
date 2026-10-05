@@ -1,0 +1,24 @@
+# Access log
+
+Actual model identifier: unknown (no concrete model identifier exposed to this agent).
+
+Read file contents:
+- TASK.md
+- skill/SKILL.md
+- skill/references/venue-guide.md
+- materials/paper/PROJECT.md
+- materials/policies.json (also read by Python for date conversion)
+- materials/paper/main.tex
+- materials/paper/sections/abstract.tex
+- materials/paper/sections/introduction.tex
+- materials/paper/sections/design.tex
+- materials/paper/sections/evaluation.tex
+- materials/paper/sections/related.tex
+
+Directory metadata / path inventory: task root via ls; files inside task root via find. No manifest contents, inactive history contents, repository files or other task runs were read.
+
+Tools used:
+- functions.exec orchestration.
+- tools.exec_command: ls, find, cat for local inspection; Python 3 datetime and zoneinfo for three timezone conversions; shell here-documents to write output.md and access-log.md.
+
+No web, external service, compilation, author code, or manuscript edit. All access confined to /tmp/spw-130-venue-current. Wrote only output.md and access-log.md.

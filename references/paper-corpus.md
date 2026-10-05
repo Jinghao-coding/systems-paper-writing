@@ -43,3 +43,7 @@ Seven TPDS and three TOCS records are listed in the [journal corpus](journal-cor
 ## How to extend the corpus
 
 Record the original publication or author source, DOI or version identifier, relevant sections, and inspected figures. Analyze the research question, section roles, technical reasoning, sentence/paragraph progression, evaluation, visual encoding, and text–figure division. Distinguish reading an abstract, reading passages, and inspecting rendered pages. Derive guidance from concrete observations before generalizing; do not copy a sample's unsupported rhetoric or editorial errors. PDFs and private reading artifacts remain outside this repository.
+
+## Stable reading-version records
+
+The [three deeper cases](case-study-depth.md) cover mechanism, protocol/correctness, and measurement reasoning. Their [fingerprints](reading-versions.json) separate research family, publication edition, exact reading bytes, extracted text, and passage locators. Existing notes retain their historical reading scope; a publication DOI identifies an edition, not necessarily identical PDF bytes. When adding or refreshing a case, record both identities and any change in pagination.

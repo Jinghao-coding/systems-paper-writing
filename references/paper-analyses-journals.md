@@ -85,3 +85,5 @@ Recorded visual pages: 12, 20, 21, 29. Fig. 6 locates fast/slow paths and GPU de
 ## Scope of the synthesis
 
 Journal depth is useful when it explains remaining mechanism questions, operating conditions, and evidence differences. It is not a requirement to lengthen background or add a fixed number of challenges. For Prophet, DrTM+B, Wukong+G, and Pragh, the notes analyze the journal itself; claims of newly added journal contributions require a separate predecessor comparison. REEF, UGache, and Jiagu comparisons use the stated conference/journal sections and extension statements.
+
+For selected cases, see [deeper reader-question analysis](case-study-depth.md) and [reading-version fingerprints](reading-versions.json).

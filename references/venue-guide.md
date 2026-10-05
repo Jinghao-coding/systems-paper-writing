@@ -38,8 +38,26 @@ Preserve the user's CCF A preference when producing a submission shortlist. Veri
 
 These dated links document the material consulted. For an actual submission, retrieve the requested year and track rather than treating 2026 rules as permanent.
 
-## Apply the recommendations
+## Matching workflow
 
-Start from the contribution: what does a reader learn that changes how systems are understood or built? Identify the most relevant communities, then inspect recent accepted papers and the current CFP. Explain a shortlist through scope, contribution type, evidence, and the user's constraints. Avoid inferring that every GPU paper belongs at an architecture conference or every learning-based scheduler belongs at an ML conference.
+1. Recover the manuscript's research question, contribution type, actual mechanism/semantics or finding, evidence scope, and user constraints. Respect named targets and requested classification; do not automatically substitute journals or lower targets to fill a list.
+2. Identify a few communities whose readers need this contribution. Topic overlap, contribution form, evidence readiness, and schedule feasibility are separate judgments. Do not recommend an identical list for every GPU or Agent paper. Protocol guarantees, measurements, operational lessons, runtimes, and hardware/software co-design imply different audiences.
+3. For each plausible candidate, find the actual edition and track from current official sources. Record retrieval date and URL for the series/year/name, paper type, CFP scope and review criteria, page limit and counting convention, anonymity, AI use/disclosure, submission and supplement rules. If timing matters, record the exact deadline, official time zone and date, and a justified conversion to the user's time zone. Check reviewer-specific AI policy separately for entrusted reviews.
+4. Use explicit states: **verified for this edition**, **historical/closed**, **next rules unpublished**, **inaccessible**, or **conflicting official sources**. Never project a future deadline from past years. Search/tool failure leaves a field unverified; it does not inherit an older value. If an entire candidate cannot be verified, present it only as a provisional community fit, not an actionable submission plan. Do not claim that a rule is unpublished merely because one page failed.
+5. If the user requests CCF A or another category, verify the applicable official edition and classify each candidate separately. Community influence, directory category, fit, and maturity are different attributes. A reading-map venue is not automatically in the requested class.
+6. When needed, inspect nearby accepted papers by research object, contribution form, assumptions, and evidence, using stable full-text locations. Shared keywords alone are insufficient. Explain why an exemplar helps assess the contribution; do not turn observed paper traits into official requirements.
+7. Assess readiness from the paper's claim–evidence mapping. Attribute explicit requirements to the CFP; label your methodological judgment as your analysis. A suitable community can still require substantial evidence repair. An otherwise complete study can be unsuitable for a track.
 
-Select exemplar papers with comparable research objects and contribution types. Borrow explanatory techniques from neighboring communities without importing their assumptions or forcing the manuscript into their section structure. For concrete writing resources, read [systems-writing resources](writing-playbook.md).
+### Delivery
+
+Lead with the strongest fit and decisive risk. Use this compact table:
+
+| Candidate year/track | Why the contribution fits | Current manuscript risks | Highest-value preparation | Sources and verification state |
+| --- | --- | --- | --- | --- |
+| Verified edition, or provisional series only | Object, audience, contribution form | Claim-specific evidence/communication gaps | Concrete repair and closure criterion | Official links, date, field-specific unknowns |
+
+Separate **current first choice**, **candidate after specified improvements**, and **directions not currently recommended**. Fewer justified candidates are better than an arbitrary fixed count. Do not mix prestige, deadline, implementation size, and research strength into one score, promise acceptance, or invent acceptance probabilities.
+
+For example: “The contribution concerns execution semantics and resource sharing, which matches a systems audience. The immediate preparation is to explain the invariant and make admission policies comparable; broader background would not resolve that evidence gap.” Only make this statement when supported by the actual manuscript.
+
+Use [submission preparation](submission-preparation.md) for applying the verified rules to files. The [worked matching example](../examples/venue-match.md) uses explicitly simulated policies; it is not a live CFP source.

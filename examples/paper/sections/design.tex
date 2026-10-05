@@ -1,0 +1,27 @@
+\section{Design}\label{sec:design}
+Let $Q$ denote the waiting queue, $B=8$ its capacity, and $\hat{s}(r)$ the
+estimated service time of request $r$. The estimate is available at arrival.
+A dispatcher handles queue operations serially. The worker is non-preemptive.
+The prototype uses one worker and one fixed model. The method does not claim
+starvation freedom.
+
+\begin{enumerate}
+\item On arrival of $r$, if $|Q|\ge B$, reject $r$ and return an overload status.
+\item Otherwise append $r$ to $Q$.
+\item When the worker becomes idle, remove a request minimizing $\hat{s}(r)$
+and execute it. Break ties by arrival order.
+\end{enumerate}
+
+The observation used to update $\hat{s}$ is added after completion. The update
+schedule and initialization are not specified in this draft.
+
+\begin{equation}\label{eq:latency}
+L(r)=t_{\mathrm{done}}(r)-t_{\mathrm{arrival}}(r).
+\end{equation}
+This quantity is defined for completed requests.
+
+\begin{figure}[h]
+\centering
+\fbox{Arrival $\longrightarrow$ budget check $\longrightarrow$ queue $\longrightarrow$ worker}
+\caption{GateQueue executes every arriving request.}\label{fig:path}
+\end{figure}

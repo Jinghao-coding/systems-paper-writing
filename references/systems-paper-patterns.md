@@ -44,18 +44,9 @@ A running example can connect mechanisms by showing the cost each removes and wh
 
 Separate offline sampling or training, online prediction, decisions, and updates. Report when and how often costs occur. A new model dimension needs an explanation of where the information comes from, how it affects a decision, and how computation or maintenance grows. UGache's per-GPU hotness also needs a dispatch policy; REEF's version selection introduces a search cost.
 
-## 4. Write precise sentences and paragraphs
+## 4. Express the mechanism precisely
 
-| Problem | Revision principle | Constructed example |
-| --- | --- | --- |
-| Abstract actor | Name the actor and decision | “The scheduler ranks candidate placements by predicted completion time.” |
-| Nested nominalization | Restore actions and their relationship | “The predictor estimates execution time. The scheduler uses the estimates to compare placements.” |
-| Vague coordination | Identify avoided or reused work | “The worker reuses the cached prefix and generates the remaining tokens.” |
-| Mixed timing boundaries | Separate stages while retaining dependency | “The transfer continues in the background. Requests can start after the required layers arrive.” |
-| Unexplained result | Explain the condition and supported cause | “The gain decreases as the cache grows, because more requests hit in both configurations.” |
-| Rotating terminology | Keep distinct objects distinct | Session, request, and turn retain their defined meanings. |
-
-These examples require corresponding evidence in the target work. A paragraph may start with a conclusion or an execution step depending on what the reader needs. Avoid repeated generic transitions when a specific unresolved cost or dependency can connect the paragraphs.
+The [English expression guide](style-analysis.md) owns sentence-level revision. Here, assess whether the described actor, timing, ownership, state transition, and guarantee correspond to the actual mechanism. A stylistically smooth change that alters any of these is a technical regression.
 
 ## 5. Add understanding beyond plotted numbers
 
@@ -111,12 +102,34 @@ End-to-end comparisons establish overall effects; mechanism experiments explain 
 
 Extract lessons about execution properties, assumptions, or trade-offs that determine applicability. Preserve the conditions of a single-case observation. Review novelty, actual implementation status, lessons, choices, context, focus, and presentation using the evidence appropriate to theoretical, prototype, measurement, or deployed work.
 
-## 9. Practical refinement order
+## 9. Use the appropriate workflow
 
-1. Read the abstract, introduction, design overview, and main evaluation to identify claims and evidence.
-2. Identify each section's unique contribution and repeated challenge/component/contribution lists.
-3. Follow key state and execution paths to locate explanatory gaps.
-4. Check terms, metrics, comparisons, assumptions, and text–figure correspondence before sentence polishing.
-5. Recheck the abstract, conclusion, captions, algorithms, formulas, and cross-references after edits.
+Use [review workflows](../review-workflows.md) for diagnosis and [writing playbook](writing-playbook.md) for actual revisions. Borrow reasoning methods from samples, not their hardware, thresholds, guarantees, or measured effects.
 
-Borrow reasoning methods from samples rather than their hardware, thresholds, guarantees, visual density, or editorial mistakes.
+## 10. Research-type review paths
+
+Select paths activated by the paper's claims. Each example below is constructed; it illustrates an inspection sequence rather than reporting a real system result. Retain necessary conditions, negative outcomes, and benefit-disappearance cases. These paths do not prescribe experiment counts.
+
+### Scheduling, sharing, and cluster resources
+
+Inspect the scheduled object, available decision-time information, budget, queue/execution boundary, preemption/recovery cost, service constraints, and fairness. **Clue:** a scheduler uses actual completion time to rank waiting jobs. **Locate:** prediction inputs and timestamped trace fields, decision pseudocode, and evaluation replay configuration. **Support:** an oracle replay can bound achievable behavior but cannot establish an online scheduler's benefit. **Opinion:** identify the oracle explicitly or evaluate estimates available at dispatch; include recovery costs if preemption contributes to the claim. Close the issue when both the decision inputs and measured interval match the online claim.
+
+### LLM training and inference
+
+Inspect workload distribution, admission, failures, quality constraints, latency/throughput definitions, cache/warm-up state, and offline versus online costs. **Clue:** A has lower P99 than B. **Locate:** accepted/rejected counts, metric population, timeout handling, and arrival-to-completion boundaries. **Support:** A rejects 20% while B admits all, so completed-request P99 describes different populations. **Opinion:** report acceptance and failure rates with latency; compare under a shared service objective or narrow the claim. Do not silently impute finite latency to rejected requests. A low-load result with no benefit remains informative. For training, check convergence/quality and total training work before calling step-throughput gains a training speedup.
+
+### Predictors and learned decisions
+
+Inspect split unit/time, target-environment calibration, distribution changes, information leakage, inference/update costs, and the decision consequences of errors. **Clue:** random rows from the same execution appear in train and test. **Locate:** split keys, fitting timestamps, preprocessing state, ranking or placement code, and held-out outcomes. **Support:** row-level accuracy does not establish generalization to unseen jobs or machines. **Opinion:** re-split at the claimed generalization unit and connect errors to actual decisions/end-to-end cost. If the claim is only in-environment calibration, preserve that narrower result rather than inventing an unseen-device requirement.
+
+### Protocols, storage, and concurrency
+
+Inspect operation semantics, fault model, invariants, concurrent transitions, recovery, and whether guarantees come from proof, model checking, or finite tests. **Clue:** a crash test is described as proving exactly-once effects. **Locate:** commit/ack ordering, durable state, retry IDs, external side effects, and proof assumptions. **Support:** passing sampled failures does not establish all executions; missing explanation does not itself refute the protocol. **Opinion:** ask how atomicity and recovery preserve the invariant and distinguish the theorem's domain from test coverage. Preserve a correct single-writer design if the paper explicitly restricts its scope to one writer.
+
+### Measurement and deployment experience
+
+Inspect sample source, representativeness, observation window, missing samples, alternative explanations, correlation/causation, and transfer conditions. **Clue:** one region improves after a cache rollout. **Locate:** sampling, before/after workload mix, simultaneous changes, cache metrics, and latency distributions. **Support:** temporal association alone cannot identify the cache as the cause. **Opinion:** analyze matched periods/groups if available, or report a bounded observational result. A deployment lesson need not invent a new algorithm; explain which environmental condition makes the lesson transferable.
+
+### Agent systems
+
+Inspect boundaries among model inference, tool actions, environment state, task success, local action accuracy, retries/recovery, and cache/experience reuse validity. **Clue:** fewer model calls is called improved reliability. **Locate:** task-level success, tool errors, retry budgets, external state versions, invalidation and rollback semantics. **Support:** action accuracy or call reduction can coexist with worse task completion. **Opinion:** separate these outcomes, account for retry cost, and check reuse preconditions. If a cached plan is validated against an unchanged environment, do not demand universal validity after arbitrary state changes; require invalidation only within the claimed operating conditions.

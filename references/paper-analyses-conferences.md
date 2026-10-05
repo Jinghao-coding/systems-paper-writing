@@ -73,3 +73,5 @@ Fig. 4 (p5) juxtaposes memcpy, amemcpy/csync, and internal execution. Figs. 9–
 Production measurements establish reuse patterns, offsets, and temporal changes before motivating cache policies. Measurement is a central contribution, so a long-design/short-motivation template is inappropriate. Section 4.1, Table 2 connects observations to priorities, prefix positions, and lifetimes.
 
 Figs. 15–17 (p8) organize distributions and heatmaps by workload and time. Figs. 25–27 (p13) pair hit rate with QTTFT. Explain whether observations persist, what decision they change, and which service metric responds. Different traces and capacities can weaken the benefit; observational correlation should not become a causal law.
+
+For selected cases, see [deeper reader-question analysis](case-study-depth.md) and [reading-version fingerprints](reading-versions.json).

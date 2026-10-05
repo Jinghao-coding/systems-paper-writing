@@ -1,0 +1,42 @@
+[
+  {
+    "family": "reef",
+    "publication_version": "OSDI 2022",
+    "reading_version": "archived publication PDF, 2026-09-28",
+    "pdf_sha256": "d0c1dfc5274d4a44826d02b70d78a90b7b9f1279d87804f398a1386abcecce91",
+    "extracted_text_sha256": "fa94d02c7404395a17f64fddaea35f6e5ea53a019176cae81196a15280e5b2b9",
+    "locators": [
+      "Section 3.2 An Illustrative Example",
+      "Section 4 Reset-based Preemption"
+    ],
+    "reread_date": "2026-10-05",
+    "reread_scope": "selected extracted passages; no new rendered-page inspection"
+  },
+  {
+    "family": "fcp",
+    "publication_version": "TPDS 2016, DOI 10.1109/TPDS.2016.2539953",
+    "reading_version": "archived publication PDF, 2026-09-28",
+    "pdf_sha256": "4f35ee5d634b807599271e83195d2073d7b610531fbc92708f36a561178ceb15",
+    "extracted_text_sha256": "d9f190b6e9b14c91758da0d1b3559f990343818007787b6053b975977613b02d",
+    "locators": [
+      "Section 3.1",
+      "Section 3.2 Basic Design"
+    ],
+    "reread_date": "2026-10-05",
+    "reread_scope": "selected extracted passages; no new rendered-page inspection"
+  },
+  {
+    "family": "kvcache",
+    "publication_version": "ATC 2025",
+    "reading_version": "archived publication PDF, 2026-09-28",
+    "pdf_sha256": "4c4e923bcc94006b316be64c9def8efffdf771786484e99ba1b820a46dd41bbf",
+    "extracted_text_sha256": "12fd82b338a25fa16be59aab8db308bf813088c2af6093475cd7923d85dda26d",
+    "locators": [
+      "Section 4.1 An overview of the design space",
+      "Table 2",
+      "Section 4.2"
+    ],
+    "reread_date": "2026-10-05",
+    "reread_scope": "selected extracted passages; no new rendered-page inspection"
+  }
+]

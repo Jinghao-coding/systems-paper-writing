@@ -1,6 +1,6 @@
 # Submission preparation
 
-Use this guide when the user requests submission or publication-stage checks. Follow the target venue's current official author instructions and the project's established build procedure.
+Use this guide when the user requests submission or publication-stage checks. Use the [venue verification workflow](venue-guide.md#matching-workflow) for current policy and the target year/track. This guide owns applying those rules to the artifact. Inspect and trust the build procedure before execution; review alone does not authorize author scripts or arbitrary LaTeX commands.
 
 ## Template, anonymity, and stage
 
@@ -22,7 +22,7 @@ Check cross-references, citation keys, bibliography output, author metadata, and
 
 ## Build and final checks
 
-Run the established build after relevant edits. Inspect titles, headers, footers, page numbers, review marks, wide figures, and the actual page count. Keep generated files in the project's designated output directory.
+After authorized edits, run the inspected, trusted project build. Confirm the active entry point and includes; re-read changed files before writing to avoid overwriting concurrent author edits. Inspect titles, headers, footers, page numbers, review marks, wide figures, and the actual page count. Keep generated files in the project's designated output directory.
 
 Deliver the requested files and report concrete completed checks. Uploading or submitting a manuscript requires the user's authorization; a formatting request alone does not authorize publication.
 

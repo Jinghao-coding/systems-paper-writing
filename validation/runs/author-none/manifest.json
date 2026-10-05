@@ -1,0 +1,41 @@
+{
+  "task": "author",
+  "variant": "none",
+  "status": "assessed",
+  "material_sha256": {
+    "paper/PROJECT.md": "e6feaf1e3ffaa6464a3edefde32ca7b6c614cfd386f150909053f9474e9622a4",
+    "paper/history/v0-abstract.tex": "3696841b06fe50e618213ae70cad7267ab3b7e5d5cfe78f53e63be7ef2a41cca",
+    "paper/main.tex": "400c8189664e6a62174d70a0b3e2ed8d93e039086332dc8b35ccf473d626fd08",
+    "paper/sections/abstract.tex": "7dbe71726b044dc878676d0577faaed80420cdd00d792d866508abcb80a41567",
+    "paper/sections/design.tex": "7e710725a9643b13feb52145c57f31f96e33d71b745e8def8e213651e5878c90",
+    "paper/sections/evaluation.tex": "bf216e84b72b6e6ddff03c425b26aef2fbdb4a7e1703fd565db47aa9216c00a8",
+    "paper/sections/introduction.tex": "fed13460d99bad8d04a09c250d1bd0ae46b6d96218cff41a5d2bdfaca0d2c81f",
+    "paper/sections/related.tex": "c40c39e8c656b00d450951e32bd24cd2e37806fbe64d4aafc8b57e853b2ea37a"
+  },
+  "skill": null,
+  "task_sha256": "8d5a115bb3440b1f24e951d37661c383ec1fa3abcc0ca405d0967f492e79b9ac",
+  "model": "unknown; inherited parent configuration, no override",
+  "host": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "available_tools": [
+    "shell/file operations",
+    "web",
+    "app connectors",
+    "UI automation",
+    "collaboration"
+  ],
+  "output_sha256": "310496df3ab1a3d652c3e845ad4b86a59e243333772638236636a1264fe9a09a",
+  "after_material_sha256": {
+    "paper/PROJECT.md": "e6feaf1e3ffaa6464a3edefde32ca7b6c614cfd386f150909053f9474e9622a4",
+    "paper/history/v0-abstract.tex": "3696841b06fe50e618213ae70cad7267ab3b7e5d5cfe78f53e63be7ef2a41cca",
+    "paper/main.tex": "400c8189664e6a62174d70a0b3e2ed8d93e039086332dc8b35ccf473d626fd08",
+    "paper/sections/abstract.tex": "7dbe71726b044dc878676d0577faaed80420cdd00d792d866508abcb80a41567",
+    "paper/sections/design.tex": "7e710725a9643b13feb52145c57f31f96e33d71b745e8def8e213651e5878c90",
+    "paper/sections/evaluation.tex": "bf216e84b72b6e6ddff03c425b26aef2fbdb4a7e1703fd565db47aa9216c00a8",
+    "paper/sections/introduction.tex": "fed13460d99bad8d04a09c250d1bd0ae46b6d96218cff41a5d2bdfaca0d2c81f",
+    "paper/sections/related.tex": "c40c39e8c656b00d450951e32bd24cd2e37806fbe64d4aafc8b57e853b2ea37a"
+  },
+  "used_tools_evidence": "access-log.md (agent-reported)",
+  "execution_order_group": 3,
+  "sampler_parameters": "host defaults; not exposed",
+  "assessment_sha256": "cb7d3c1ddeb113eed49a7c7698467b477053a66db3dabe82a3de22bc0c0e59bd"
+}

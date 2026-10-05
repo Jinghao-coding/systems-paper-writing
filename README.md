@@ -4,9 +4,9 @@
 
 **Explain the problem. Make the mechanism clear. Let evidence support the claim.**
 
-An English writing skill for computer-systems research targeting CCF A conferences and journals.
+Author draft review, fair paper assessment, and evidence-based submission matching for English computer-systems research.
 
-[![Version](https://img.shields.io/badge/skill-1.2.0-2563eb?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/skill-1.3.0-2563eb?style=flat-square)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-Apache--2.0-64748b?style=flat-square)](LICENSE)
 [![Checks](https://github.com/Jinghao-coding/systems-paper-writing/actions/workflows/check.yml/badge.svg)](https://github.com/Jinghao-coding/systems-paper-writing/actions/workflows/check.yml)
 
@@ -18,24 +18,17 @@ An English writing skill for computer-systems research targeting CCF A conferenc
 
 ## What it does
 
-Turn research materials into a focused argument, explain consequential design choices, refine technical prose, and connect experiments to claims. The skill covers scheduling, GPU sharing, cluster management, AI infrastructure, and agent systems, including journal extensions.
+Three first-class tasks for English computer-systems research:
 
-| Task | Result |
-| :--- | :--- |
-| Organize a paper | A problem-driven outline with clear section roles and evidence dependencies |
-| Draft or refine a mechanism | Concrete objects, states, decisions, execution effects, and necessary conditions |
-| Review an argument | Located issues with evidence, consequences, and completion criteria |
-| Explain experiments | Accurate comparisons and interpretations that add understanding beyond plotted numbers |
-| Extend a conference paper | Consistent motivation, design, implementation, and evaluation for the added contribution |
-| Find and check references | Search entry points, candidate metadata, DOI lookup, retrieved BibTeX, and field-level checks |
+| Task | What you receive |
+| --- | --- |
+| **Author draft review** | Overall contribution assessment, located substantive issues, claim–design–evidence mapping, prioritized revision route, and requested replacement prose |
+| **Other-paper review** | Neutral contribution summary, evidenced strengths and concerns, answerable questions, and a distinction between errors, missing evidence, and unclear explanation |
+| **Conference matching and readiness** | A small sourced shortlist by year/track, research-fit rationale, current evidence risks, policy verification, and concrete preparation priorities |
 
-Instructions and reference guides are in English. Communicate in the user's requested language; provide manuscript text in the requested language. CCF A is the target audience and venue preference, not a mandatory paper template. Current venue rules are checked for submission tasks.
+Local English polishing, mechanism rewriting, evaluation analysis, related-work verification, journal extensions, figure review, and submission formatting remain separately selectable. A polish stays local; a paper review examines the research. Mechanisms, abstractions, protocols, measurements, deployment experience, cross-layer designs, and optimizations need different evidence.
 
-## Recommended research communities
-
-Start with **OSDI, SOSP, ASPLOS, EuroSys, and ATC**, then expand according to the contribution: **NSDI / SIGCOMM** for networked systems, **FAST** for storage, **ISCA / MICRO / HPCA** for architecture, **PPoPP / PLDI / SC** for parallel execution and systems software, **SIGMETRICS** for performance, **SIGMOD / VLDB / ICDE** for data systems, and **MLSys** for ML infrastructure. Specialist communities and workshops are included in the [11-area venue guide](references/venue-guide.md).
-
-The guide separates reading recommendations from submission selection and records official entry points. The [writing playbook](references/writing-playbook.md) provides extracted methods, decision criteria, and constructed revisions for direct use. Writing and polishing apply these methods directly. [Source attribution](references/writing-sources.md) is maintained separately.
+Guides are English; communication follows your language and manuscript prose follows your request. Real submission advice checks current official policies and requested classifications. OSDI, SOSP, ASPLOS, EuroSys, PPoPP, and ATC are possible starting communities, not a universal ranking or a promise of suitability. See the [contribution-based venue guide](references/venue-guide.md).
 
 ## Quick start
 
@@ -60,20 +53,38 @@ If you already maintain the skill under `~/.codex/skills`, update that existing 
 ### Use it
 
 ```text
-Use $systems-paper-writing to refine the design section.
-Read the adjacent paragraphs and algorithm first. Preserve technical meaning,
-explain the state and decision flow, and return replacement prose.
-Separate any scientific correction from optional language changes.
+Use $systems-paper-writing to review my first draft.
+Assess whether its contribution, design and experiments support each other.
+Locate the problems, distinguish research gaps from expression issues,
+and provide a prioritized revision route. Do not edit files.
 ```
 
-In Claude Code, invoke `/systems-paper-writing`.
+```text
+Use $systems-paper-writing for a simulated review of this public paper.
+Summarize its contribution accurately, give evidenced strengths and major
+concerns, and ask answerable questions. Distinguish established errors from
+insufficient material; do not presuppose rejection.
+```
 
-Other useful requests:
+```text
+Use $systems-paper-writing to recommend matching top conferences and tracks
+from this paper's question, contribution type and available evidence.
+Verify current official requirements. Explain fit, risks and preparation
+priorities rather than sorting by conference prestige.
+```
 
-- “Review whether the introduction's claims are supported by the design and evaluation. Do not edit files.”
-- “Reorganize this evaluation around its research questions, retaining all metric definitions and comparison conditions.”
-- “Compare the conference and journal drafts. Identify new mechanisms, explanation, and evidence, then revise the contribution statements.”
-- “Check the references supporting this paragraph, including the version and author order.”
+In Claude Code, invoke `/systems-paper-writing`. Smaller requests:
+
+- “Polish only this paragraph; read adjacent definitions and preserve correct text.”
+- “Rewrite this mechanism using its actual state, trigger, decision and execution.”
+- “Compare conference and journal versions; distinguish new mechanisms from added explanation.”
+- “Check these references and the original passages supporting this claim.”
+
+### Example review output
+
+> **Confirmed evidence conflict — abstract, design step 1, Table 1.** The abstract says all requests are accepted, but the algorithm rejects arrivals at capacity and the table completes 80 requests versus FIFO's 100. The two P99 values describe different populations. Correct the admission descriptions and report coverage alongside completed-request latency. Retaining an equal-service improvement claim requires a comparison with matched admission conditions. Closure: all claims and captions use the correct population and any equal-service benefit has corresponding evidence.
+
+This excerpt comes from the [complete original teaching example](examples/author-review.md), with a minimal multi-file paper, an inactive old version, and an applicable revision patch. Full [other-paper](examples/other-review.md) and [venue matching](examples/venue-match.md) examples use the same manuscript. All data/policies are explicitly constructed and distributable.
 
 ## Guides
 
@@ -81,6 +92,8 @@ Other useful requests:
 
 | Topic | Guides |
 | :--- | :--- |
+| Author and other-paper review | [Review workflows](review-workflows.md) |
+| Drafting and responses | [Writing playbook](references/writing-playbook.md) |
 | Language and reader understanding | [Writing guidance](references/style-analysis.md) · [Edit examples](references/edit-catalog.md) |
 | Structure, design, and evaluation | [Systems-paper patterns](references/systems-paper-patterns.md) |
 | Figures and submission | [Figures and tables](references/figure-and-table-style.md) · [Submission preparation](references/submission-preparation.md) |
@@ -118,8 +131,10 @@ python3 scripts/check_package.py
 python3 -m unittest discover -s tests
 ```
 
+Behavioral and engineering tasks have [separate blind inputs and assessor answers](tests/behavior/README.md). Use `scripts/behavior_eval.py` to prepare current, previous, or no-skill arms and capture actual outputs. See the [validation record](validation/2026-10-05.md) for this revision.
+
 For a Git installation, review local changes, then run `git pull --ff-only` in the skill repository. Keep institution-specific rules, manuscript facts, and private source material in the user's project.
 
 ## License and attribution
 
-Distributed under [Apache-2.0](LICENSE), with the predecessor's [MIT notice](licenses/system-paper-skill-MIT.txt) retained for adapted portions. [NOTICE](NOTICE.md) and [provenance](references/provenance.md) identify sources. Full papers and private manuscript revisions are outside this package.
+Distributed under [Apache-2.0](LICENSE), with the predecessor's [MIT notice](licenses/system-paper-skill-MIT.txt) retained for adapted portions. [NOTICE](NOTICE.md) and [provenance](references/provenance.md) identify sources. Original constructed manuscript fixtures are included under this license. Third-party full papers and private manuscripts remain outside this package.
